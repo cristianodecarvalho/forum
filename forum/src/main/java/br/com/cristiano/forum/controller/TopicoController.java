@@ -3,6 +3,8 @@ package br.com.cristiano.forum.controller;
 import java.net.URI;
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -38,7 +40,7 @@ public class TopicoController {
 	}
 	
 	@PostMapping
-	public ResponseEntity<TopicoDto> cadastrar(@RequestBody TopicoInput topicoInput, UriComponentsBuilder uriBuilder) {
+	public ResponseEntity<TopicoDto> cadastrar(@RequestBody @Valid TopicoInput topicoInput, UriComponentsBuilder uriBuilder) {
 		Topico topico = topicoInput.toEntity(cursoRepository);
 		topicoRepository.save(topico);
 		
