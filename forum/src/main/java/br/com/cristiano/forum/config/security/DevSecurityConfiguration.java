@@ -18,6 +18,5 @@ public class DevSecurityConfiguration extends WebSecurityConfigurerAdapter{
 		.antMatchers("/**").permitAll()
 		.and().csrf().disable();
 	}
-
 	
 }
