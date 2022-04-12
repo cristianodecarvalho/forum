@@ -1,3 +1,3 @@
 # forum
 
-API Url: https://cristiano-forum.herokuapp.com/topicos
+API Documentation: https://cristiano-forum.herokuapp.com/swagger-ui.html
